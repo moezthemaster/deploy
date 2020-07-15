@@ -15,19 +15,19 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-  <!--build>
+  <build>
     <plugins>
       <plugin>
         <groupId>com.xebialabs.xldeploy</groupId>
         <artifactId>xldeploy-maven-plugin</artifactId>
         <configuration>
-          <environmentId>${deployit.environmentId}</environmentId>
+          <!--environmentId>${deployit.environmentId}</environmentId>
           <serverAddress>${deployit.server}</serverAddress>
           <port>${deployit.port}</port>
           <secured>${deployit.secured}</secured>
           <server>${deployit.credentials}</server>
           <deletePreviouslyDeployedDar>false</deletePreviouslyDeployedDar>
-          <testMode>${deployit.testMode}</testMode>
+          <testMode>${deployit.testMode}</testMode-->
           <deployables>
             <deployable>
               <name>configuration</name>
@@ -38,5 +38,5 @@
         </configuration>
       </plugin>
     </plugins>
-  </build-->
+  </build>
 </project>
