@@ -20,6 +20,8 @@
       <plugin>
         <groupId>com.xebialabs.xldeploy</groupId>
         <artifactId>xldeploy-maven-plugin</artifactId>
+        <version>7.5.8</version>
+        <extensions>true</extensions> <!-- tells maven the plugin contains extensions -->
         <configuration>
           <!--environmentId>${deployit.environmentId}</environmentId>
           <serverAddress>${deployit.server}</serverAddress>
