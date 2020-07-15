@@ -20,9 +20,9 @@
     <maven.deploy.skip>true</maven.deploy.skip>
     <deployit.plugin.version>5.1.0</deployit.plugin.version>
     <deployit.testModel>false</deployit.testModel>
-    <deployit.server>servertodo</deployit.server>
+    <deployit.server>10.0.2.15</deployit.server>
     <deployit.context>deployx</deployit.context>
-    <deployit.port>8080</deployit.port>
+    <deployit.port>4516</deployit.port>
     <deployit.secured>false</deployit.secured>
     <deployit.credentials>deployit-credentials</deployit.credentials>
     <deployit.environmentId>TODO</deployit.environmentId>
