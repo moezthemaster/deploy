@@ -12,7 +12,7 @@
             <plugin>
                 <groupId>com.xebialabs.xldeploy</groupId>
                 <artifactId>xldeploy-maven-plugin</artifactId>
-                <!--version>5.0.1</version-->
+                <version>5.0.1</version>
                 <extensions>true</extensions>
                 <executions>
                     <execution>
