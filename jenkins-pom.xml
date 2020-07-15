@@ -15,30 +15,28 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.deploy.skip>true</maven.deploy.skip>
+    <deployit.plugin.version>5.1.0</deployit.plugin.version>
+    <deployit.testModel>false</deployit.testModel>
+    <deployit.server>servertodo</deployit.server>
+    <deployit.context>deployx</deployit.context>
+    <deployit.port>8080</deployit.port>
+    <deployit.secured>false</deployit.secured>
+    <deployit.credentials>deployit-credentials</deployit.credentials>
+    <deployit.environmentId>TODO</deployit.environmentId>
+    <jenkins.buildNumber>${BUILD_NUMBER}</jenkins.buildNumber>
+
+  </properties>
   <build>
-    <plugins>
-      <plugin>
-        <groupId>com.xebialabs.xldeploy</groupId>
-        <artifactId>xldeploy-maven-plugin</artifactId>
-        <version>7.5.8</version>
-        <extensions>true</extensions> <!-- tells maven the plugin contains extensions -->
-        <configuration>
-          <!--environmentId>${deployit.environmentId}</environmentId>
-          <serverAddress>${deployit.server}</serverAddress>
-          <port>${deployit.port}</port>
-          <secured>${deployit.secured}</secured>
-          <server>${deployit.credentials}</server>
-          <deletePreviouslyDeployedDar>false</deletePreviouslyDeployedDar>
-          <testMode>${deployit.testMode}</testMode-->
-          <deployables>
-            <deployable>
-              <name>configuration</name>
-              <type>file.Folder</type>
-              <location>config</location>
-            </deployable>
-          </deployables>
-        </configuration>
-      </plugin>
-    </plugins>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>com.xebialabs.xldeploy</groupId>
+          <artifactId>xldeploy-maven-plugin</artifactId>
+        </plugin>
+      </plugins>
+    </pluginManagement>
   </build>
 </project>
