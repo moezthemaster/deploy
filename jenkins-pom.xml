@@ -19,7 +19,7 @@
     <plugins>
       <plugin>
         <groupId>com.xebialabs.deployit</groupId>
-        <artifactId>xmaven-deployit-plugin</artifactId>
+        <artifactId>xldeploy-maven-plugin</artifactId>
         <configuration>
           <environmentId>${deployit.environmentId}</environmentId>
           <serverAddress>${deployit.server}</serverAddress>
