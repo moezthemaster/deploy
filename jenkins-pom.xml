@@ -7,30 +7,34 @@
   <version>1.0.0</version>
   <name>com.packt.samples.archetype</name>
   <url>http://maven.apache.org</url>
-  <pluginRepositories>
-    <pluginRepository>
-        <id>xebialabs-maven2</id>
-        <url>https://dist.xebialabs.com/public/maven2/</url>
-    </pluginRepository>
-    <pluginRepository>
-        <id>knopflerfish</id>
-        <url>http://www.knopflerfish.org/maven2</url>
-    </pluginRepository>
-  </pluginRepositories>
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
-  <deployables>
-    <deployable>
-        <name>configuration</name>
-        <type>file.Folder</type>
-        <location>config</location>
-    </deployable>
-  </deployables>
-  
+ <!--url>http://www.xebialabs.com</url-->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.xebialabs.xldeploy</groupId>
+                <artifactId>xldeploy-maven-plugin</artifactId>
+                <version>5.0.1</version>
+                <extensions>true</extensions>
+                <executions>
+                    <execution>
+                        <id>deploy-id</id>
+                        <phase>pre-integration-test</phase>
+                        <goals>
+                            <goal>deploy</goal>
+                        </goals>
+                    </execution>
+                </executions>
+
+                <configuration>
+                    <serverAddress>localhost</serverAddress>
+                    <deployables>
+                        <file.Folder name="configuration" location="config"/>
+                    </deployables>
+
+                    <environmentId>Environments/Dev/Tomcat-Dev</environmentId>
+
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
