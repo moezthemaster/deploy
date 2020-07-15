@@ -14,18 +14,13 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
-    <dependency>
-      <groupId>xldeploy-maven-plugin</groupId>
-      <artifactId>xldeploy-maven-plugin</artifactId>
-      <version>6.0.0</version>
-    </dependency>
   </dependencies>
   <build>
     <plugins>
       <plugin>
         <groupId>com.xebialabs.xldeploy</groupId>
         <artifactId>xldeploy-maven-plugin</artifactId>
-        <version>6.0.0</version>
+        <version>7.5.8</version>
         <extensions>true</extensions> <!-- tells maven the plugin contains extensions -->
         <configuration>
           <deploymentPackageProperties>
