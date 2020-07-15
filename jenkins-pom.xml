@@ -20,14 +20,14 @@
       <plugin>
         <groupId>com.xebialabs.xldeploy</groupId>
         <artifactId>xldeploy-maven-plugin</artifactId>
-        <version>7.5.8</version>
-        <extensions>true</extensions> <!-- tells maven the plugin contains extensions -->
         <configuration>
-          <deploymentPackageProperties>
-            <!-- Enter any deployment package level properties as <property>value</property> -->
-            <orchestrator>default</orchestrator>
-            <satisfiesReleaseNotes>true</satisfiesReleaseNotes>
-          </deploymentPackageProperties>
+          <environmentId>${deployit.environmentId}</environmentId>
+          <serverAddress>${deployit.server}</serverAddress>
+          <port>${deployit.port}</port>
+          <secured>${deployit.secured}</secured>
+          <server>${deployit.credentials}</server>
+          <deletePreviouslyDeployedDar>false</deletePreviouslyDeployedDar>
+          <testMode>${deployit.testMode}</testMode>
           <deployables>
             <deployable>
               <name>configuration</name>
