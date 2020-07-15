@@ -18,7 +18,7 @@
   <build>
     <plugins>
       <plugin>
-        <groupId>com.xebialabs.deployit</groupId>
+        <groupId>com.xebialabs.xldeploy</groupId>
         <artifactId>xldeploy-maven-plugin</artifactId>
         <configuration>
           <environmentId>${deployit.environmentId}</environmentId>
