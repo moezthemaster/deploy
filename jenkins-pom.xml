@@ -7,6 +7,16 @@
   <version>1.0.0</version>
   <name>com.packt.samples.archetype</name>
   <url>http://maven.apache.org</url>
+  <pluginRepositories>
+    <pluginRepository>
+        <id>xebialabs-maven2</id>
+        <url>https://dist.xebialabs.com/public/maven2/</url>
+    </pluginRepository>
+    <pluginRepository>
+        <id>knopflerfish</id>
+        <url>http://www.knopflerfish.org/maven2</url>
+    </pluginRepository>
+  </pluginRepositories>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -15,28 +25,5 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.deploy.skip>true</maven.deploy.skip>
-    <deployit.plugin.version>5.1.0</deployit.plugin.version>
-    <deployit.testModel>false</deployit.testModel>
-    <deployit.server>10.0.2.15</deployit.server>
-    <deployit.context>deployx</deployit.context>
-    <deployit.port>4516</deployit.port>
-    <deployit.secured>false</deployit.secured>
-    <deployit.credentials>deployit-credentials</deployit.credentials>
-    <deployit.environmentId>TODO</deployit.environmentId>
-    <jenkins.buildNumber>${BUILD_NUMBER}</jenkins.buildNumber>
-
-  </properties>
-  <build>
-    <pluginManagement>
-      <plugins>
-        <plugin>
-          <groupId>com.xebialabs.xldeploy</groupId>
-          <artifactId>xldeploy-maven-plugin</artifactId>
-        </plugin>
-      </plugins>
-    </pluginManagement>
-  </build>
+  
 </project>
