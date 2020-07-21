@@ -17,7 +17,7 @@
   <dependency>
   <groupId>com.xebialabs.xldeploy</groupId>
   <artifactId>xldeploy-maven-plugin</artifactId>
-  <version>5.0.0</version>
+  <version>5.7.0</version>
   <scope>test</scope>
   <!--scope>test</scope-->
  </dependency>
