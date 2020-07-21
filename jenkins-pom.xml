@@ -5,10 +5,7 @@
 <artifactId>com.packt.samples.archetype</artifactId>
 <packaging>pom</packaging>
 <version>1.0.0-SNAPSHOT_${BUILD_ID}</version>
-<pluginRepository>
-  <id>xebialabs-maven2</id>
-  <url>https://dist.xebialabs.com/public/maven2/</url>
-</pluginRepository>
+
 <properties>
   <maven.deploy.skip>true</maven.deploy.skip>
   <deployit.plugin.version>6.0.0</deployit.plugin.version>
@@ -32,6 +29,12 @@
 </build>
 
 <profiles>
+  <profile>
+    <pluginRepository>
+      <id>xebialabs-maven2</id>
+      <url>https://dist.xebialabs.com/public/maven2/</url>
+    </pluginRepository>
+  </profile>
   <profile>
     <id>build-dar</id>
 	<activation>
