@@ -90,6 +90,33 @@
 	  </plugins>
 	</build>
   </profile>
+  
+  
+    <profile>
+    <id>do-import</id>
+	<activation>
+	  <property>
+	    <name>doImport</name>
+	  </property>
+	</activation>
+	<build>
+	  <plugins>
+	    <plugin>
+		  <groupId>com.xebialabs.xldeploy</groupId>
+		  <artifactId>com.xebialabs.xldeploy</artifactId>
+		  <executions>
+		    <execution>
+			  <id>import</id>
+			  <phase>pre-integration-test</phase>
+			  <goals>
+			    <goal>import</goal>
+			  </goals>
+			</execution>
+		  </executions>
+		</plugin>
+	  </plugins>
+	</build>
+  </profile>
 </profiles>
 
 <dependencies>
