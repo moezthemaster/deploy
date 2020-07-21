@@ -12,7 +12,6 @@
  <plugin>
   <groupId>com.xebialabs.xldeploy</groupId>
    <artifactId>xldeploy-maven-plugin</artifactId>
-    <version>6.0.0</version>
      <extensions>true</extensions> <!-- tells maven the plugin contains extensions -->
       <configuration>
                     <deployables>
