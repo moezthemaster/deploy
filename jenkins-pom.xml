@@ -7,13 +7,11 @@
 <version>1.0.0</version>
 <name>com.packt.samples.archetype</name>
 <url>http://maven.apache.org</url>
-<build>
-    <plugins>
 <pluginRepositories>
-    <pluginRepository>
-        <id>xebialabs-maven2</id>
-        <url>https://dist.xebialabs.com/public/maven2/</url>
-    </pluginRepository>
+ <pluginRepository>
+  <id>xebialabs-maven2</id>
+   <url>https://dist.xebialabs.com/public/maven2/</url>
+ </pluginRepository>
 </pluginRepositories>
 </plugins>
     </build>
