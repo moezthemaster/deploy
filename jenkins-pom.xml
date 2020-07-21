@@ -28,6 +28,45 @@
   </pluginManagement>
 </build>
 
+<profiles>
+  <profile>
+    <id>build-dar</id>
+	<activation>
+	  <property>
+	    <name>!deactivatesDeployit</name>
+	  </property>
+	</activation>
+	<build>
+	  <plugins>
+	    <plugin>
+		  <groupId>com.xebialabs.xldeploy</groupId>
+		  <artifactId>com.xebialabs.xldeploy</artifactId>
+		  <configuration>
+		    <environmentId>${deployit.environmentId}</environmentId>
+			<serverAddress>${deployit.server}</serverAddress>
+			<port>${deployit.port}</port>
+			<deployables>
+			  <file.Folder name="deploy shell files">
+			    <targetPathShared>true</targetPathShared>
+				<targetPathSharedSubDirectories>true</targetPathSharedSubDirectories>
+				<scanPlaceholders>false</scanPlaceholders>
+				<targetPath>/tmp/test</targetPath>
+				<createTargetPath>true</createTargetPath>
+				<location>scripts</location>
+				<createOrder>71</createOrder>
+				<modifyOrder>71</modifyOrder>
+				<tags>
+				  <value>deploy-tools</value>
+				</tags>
+			  </file.Folder>
+			</deployables>
+		  </configuration>
+		</plugin>
+	  </plugins>
+	</build>
+  </profile>
+</profiles>
+
 <dependencies>
  <dependency>
   <groupId>junit</groupId>
