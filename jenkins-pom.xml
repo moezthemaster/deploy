@@ -7,73 +7,6 @@
 <version>1.0.0</version>
 <name>com.packt.samples.archetype</name>
 <url>http://maven.apache.org</url>
-           <build>
-        <plugins>
-            <plugin>
-                    <pluginRepository>
-        <id>xebialabs-maven2</id>
-        <url>https://dist.xebialabs.com/public/maven2/</url>
-</pluginRepository>
-                <groupId>com.xebialabs.xldeploy</groupId>
-                <artifactId>xldeploy-maven-plugin</artifactId>
-                <version>6.0.0</version>
-
-                <extensions>true</extensions> <!-- tells maven the plugin contains extensions -->
-
-                <configuration>
-                    <deploymentPackageProperties>
-                        <!-- Enter any deployment package level properties as <property>value</property> -->
-                        <orchestrator>default</orchestrator>
-                        <satisfiesReleaseNotes>true</satisfiesReleaseNotes>
-                    </deploymentPackageProperties>
-                    <deployables>
-
-                        <jee.War name="petclinic" groupId="com.xebialabs.deployit.demo.petclinic-war" artifactId="PetClinic"/>
-
-                        <jee.War name="petclinic-backend" groupId="com.xebialabs.deployit.demo.petclinic-war" artifactId="PetClinic-Backend"/>
-
-                        <file.Archive name="mysql-backend" groupId="mysql" artifactId="mysql-connector-java"/>
-
-                        <file.Folder name="configurationFolder" location="config"/>
-
-                        <file.Archive name="configuration" groupId="org.some.group" artifactId="your-artifact" classifier="txt"/>
-
-                        <wls.DataSourceSpec name="petclinicDS">
-                            <jndiNames>jndi/toto</jndiNames>
-                            <driverName>com.mysql.jdbc.Driver</driverName>
-                            <url>jdbc:mysql://localhost/petclinic</url>
-                            <username>{{DB_USERNAME}}</username>
-                            <password>{{DB_PASSWORD}}</password>
-                        </wls.DataSourceSpec>
-
-                        <sample.AllPossibleKindsSpec name="sampleWithAllPossibleKinds">
-                            <someProp>propValue</someProp>
-                            <someBoolean>true</someBoolean>
-                            <myList>
-                                <value>val1</value>
-                                <value>val2</value>
-                            </myList>
-                            <myMap>
-                                <entry key="key">value</entry>
-                                <entry key="foo">bar</entry>
-                            </myMap>
-                            <myEmbedded>
-                                <sample.EmbeddedCi name="MyEmbeddedCi">
-                                    <someProp>propValue</someProp>
-                                </sample.EmbeddedCi>
-                            </myEmbedded>
-                            <myCiRef ref="petClinicDs"/>
-                            <myCiRefs>
-                                <ci ref="petclinic-backend"/>
-                                <ci ref="mysql-backend"/>
-                            </myCiRefs>
-                        </sample.AllPossibleKindsSpec>
-
-                   </deployables>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
 
 <dependencies>
  <dependency>
@@ -82,5 +15,34 @@
   <version>3.8.1</version>
   <scope>test</scope>
  </dependency>
+<dependency>
+    <groupId>com.xebialabs.deployit</groupId>
+    <artifactId>udm-plugin-api</artifactId>
+    <version>2017.5.0</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/com.xebialabs.deployit.engine/remote-booter -->
+<dependency>
+    <groupId>com.xebialabs.deployit.engine</groupId>
+    <artifactId>remote-booter</artifactId>
+    <version>2017.5.0</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/com.xebialabs.overthere/overthere -->
+<dependency>
+    <groupId>com.xebialabs.overthere</groupId>
+    <artifactId>overthere</artifactId>
+    <version>5.0.1</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/com.xebialabs.deployit.engine/engine-xml -->
+<dependency>
+    <groupId>com.xebialabs.deployit.engine</groupId>
+    <artifactId>engine-xml</artifactId>
+    <version>2017.5.0</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/com.xebialabs.deployit/engine-api -->
+<dependency>
+    <groupId>com.xebialabs.deployit</groupId>
+    <artifactId>engine-api</artifactId>
+    <version>2017.5.0</version>
+</dependency>
 </dependencies>
 </project>
