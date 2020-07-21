@@ -65,6 +65,31 @@
 	  </plugins>
 	</build>
   </profile>
+  <profile>
+    <id>do-package</id>
+	<activation>
+	  <property>
+	    <name>doPackage</name>
+	  </property>
+	</activation>
+	<build>
+	  <plugins>
+	    <plugin>
+		  <groupId>com.xebialabs.xldeploy</groupId>
+		  <artifactId>com.xebialabs.xldeploy</artifactId>
+		  <executions>
+		    <execution>
+			  <id>dar-packaging</id>
+			  <phase>package</phase>
+			  <goals>
+			    <goal>generate-deployement-package</goal>
+			  </goals>
+			</execution>
+		  </executions>
+		</plugin>
+	  </plugins>
+	</build>
+  </profile>
 </profiles>
 
 <dependencies>
