@@ -7,6 +7,9 @@
 <version>1.0.0</version>
 <name>com.packt.samples.archetype</name>
 <url>http://maven.apache.org</url>
+  <pluginGroups>
+    <pluginGroup>com.xebialabs.xldeploy</pluginGroup>
+  </pluginGroups>
 <dependencies>
  <dependency>
   <groupId>junit</groupId>
@@ -16,3 +19,4 @@
  </dependency>
 </dependencies>
 </project>
+
