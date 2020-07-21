@@ -7,7 +7,8 @@
 <version>1.0.0</version>
 <name>com.packt.samples.archetype</name>
 <url>http://maven.apache.org</url>
-<plugins>
+<build>
+    <plugins>
 <pluginRepositories>
     <pluginRepository>
         <id>xebialabs-maven2</id>
@@ -16,6 +17,7 @@
     <pluginRepository>
 </pluginRepositories>
 </plugins>
+    </build>
 <dependencies>
  <dependency>
   <groupId>junit</groupId>
