@@ -13,7 +13,6 @@
    <url>https://dist.xebialabs.com/public/maven2/</url>
  </pluginRepository>
 </pluginRepositories>
-</plugins>
 <dependencies>
  <dependency>
   <groupId>junit</groupId>
