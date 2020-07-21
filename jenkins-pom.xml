@@ -1,16 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
-  <pluginGroups>
-    <pluginGroup>com.xebialabs.xldeploy</pluginGroup>
-  </pluginGroups>
-  >
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 <modelVersion>4.0.0</modelVersion>
 <groupId>com.packt.samples</groupId>
 <artifactId>com.packt.samples.archetype</artifactId>
 <packaging>jar</packaging>
 <version>1.0.0</version>
 <name>com.packt.samples.archetype</name>
-<url>http://maven.apache.org</url>
+
+<properties>
+  <maven.deploy.skip>true</maven.deploy.skip>
+  <deployit.plugin.version>5.0.1</deployit.plugin.version>
+  <deployit.server>10.0.2.15</deployit.server>
+  <deployit.port>4516</deployit.port>
+  <deployit.credentials>adm-creds</deployit.credentials>
+  <deployit.environmentId>Environments/DEV_LOCAL</deployit.environmentId>
+</properties>
+
+<buid>
+  <pluginManagement>
+    <plugins>
+	  <plugin>
+	    <groupId>com.xebialabs.xldeploy</groupId>
+		<artifactId>com.xebialabs.xldeploy</artifactId>
+		<version>${deployit.plugin.version}</version>
+	  </plugin>
+	</plugins>
+  </pluginManagement>
+</buid>
 
 <dependencies>
  <dependency>
