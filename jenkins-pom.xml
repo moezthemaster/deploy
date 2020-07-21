@@ -3,9 +3,8 @@
 <modelVersion>4.0.0</modelVersion>
 <groupId>com.packt.samples</groupId>
 <artifactId>com.packt.samples.archetype</artifactId>
-<packaging>jar</packaging>
-<version>1.0.0</version>
-<name>com.packt.samples.archetype</name>
+<packaging>pom</packaging>
+<version>1.0.0-SNAPSHOT_${BUILD_ID}</version>
 
 <properties>
   <maven.deploy.skip>true</maven.deploy.skip>
@@ -14,6 +13,7 @@
   <deployit.port>4516</deployit.port>
   <deployit.credentials>adm-creds</deployit.credentials>
   <deployit.environmentId>Environments/DEV_LOCAL</deployit.environmentId>
+  <jenkins.buildNumber>${BUILD_NUMBER}</jenkins.buildNumber>
 </properties>
 
 <build>
