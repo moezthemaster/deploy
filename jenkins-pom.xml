@@ -7,6 +7,20 @@
 <version>1.0.0</version>
 <name>com.packt.samples.archetype</name>
 <url>http://maven.apache.org</url>
+<build>
+<plugins>
+ <plugin>
+  <groupId>com.xebialabs.xldeploy</groupId>
+   <artifactId>xldeploy-maven-plugin</artifactId>
+    <version>6.0.0</version>
+     <extensions>true</extensions> <!-- tells maven the plugin contains extensions -->
+      <configuration>
+                    <deployables>
+                   </deployables>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 <dependencies>
  <dependency>
   <groupId>junit</groupId>
