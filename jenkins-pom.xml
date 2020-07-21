@@ -7,7 +7,27 @@
 <version>1.0.0</version>
 <name>com.packt.samples.archetype</name>
 <url>http://maven.apache.org</url>
-
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.xebialabs.xldeploy</groupId>
+                <artifactId>xldeploy-maven-plugin</artifactId>
+                <version>6.0.0</version>
+                <extensions>true</extensions> <!-- tells maven the plugin contains extensions -->
+                <configuration>
+                    <deploymentPackageProperties>
+                        <!-- Enter any deployment package level properties as <property>value</property> -->
+                        <orchestrator>default</orchestrator>
+                        <satisfiesReleaseNotes>true</satisfiesReleaseNotes>
+                    </deploymentPackageProperties>
+                    <deployables>
+                        <file.Folder name="configurationFolder" location="config"/>
+                        <file.Archive name="configuration" groupId="org.some.group" artifactId="your-artifact" classifier="txt"/>
+                   </deployables>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 <dependencies>
  <dependency>
   <groupId>junit</groupId>
@@ -15,34 +35,5 @@
   <version>3.8.1</version>
   <scope>test</scope>
  </dependency>
-<dependency>
-    <groupId>com.xebialabs.deployit</groupId>
-    <artifactId>udm-plugin-api</artifactId>
-    <version>2017.5.0</version>
-</dependency>
-<!-- https://mvnrepository.com/artifact/com.xebialabs.deployit.engine/remote-booter -->
-<dependency>
-    <groupId>com.xebialabs.deployit.engine</groupId>
-    <artifactId>remote-booter</artifactId>
-    <version>2017.5.0</version>
-</dependency>
-<!-- https://mvnrepository.com/artifact/com.xebialabs.overthere/overthere -->
-<dependency>
-    <groupId>com.xebialabs.overthere</groupId>
-    <artifactId>overthere</artifactId>
-    <version>5.0.1</version>
-</dependency>
-<!-- https://mvnrepository.com/artifact/com.xebialabs.deployit.engine/engine-xml -->
-<dependency>
-    <groupId>com.xebialabs.deployit.engine</groupId>
-    <artifactId>engine-xml</artifactId>
-    <version>2017.5.0</version>
-</dependency>
-<!-- https://mvnrepository.com/artifact/com.xebialabs.deployit/engine-api -->
-<!--dependency>
-    <groupId>com.xebialabs.deployit</groupId>
-    <artifactId>engine-api</artifactId>
-    <version>2017.5.0</version>
-</dependency-->
 </dependencies>
 </project>
