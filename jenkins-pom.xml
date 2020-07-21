@@ -14,7 +14,6 @@
         <id>xebialabs-maven2</id>
         <url>https://dist.xebialabs.com/public/maven2/</url>
     </pluginRepository>
-    <pluginRepository>
 </pluginRepositories>
 </plugins>
     </build>
