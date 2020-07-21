@@ -39,10 +39,10 @@
     <version>2017.5.0</version>
 </dependency>
 <!-- https://mvnrepository.com/artifact/com.xebialabs.deployit/engine-api -->
-<dependency>
+<!--dependency>
     <groupId>com.xebialabs.deployit</groupId>
     <artifactId>engine-api</artifactId>
     <version>2017.5.0</version>
-</dependency>
+</dependency-->
 </dependencies>
 </project>
