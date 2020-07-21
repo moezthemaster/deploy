@@ -7,33 +7,18 @@
 <version>1.0.0</version>
 <name>com.packt.samples.archetype</name>
 <url>http://maven.apache.org</url>
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>com.xebialabs.xldeploy</groupId>
-                <artifactId>xldeploy-maven-plugin</artifactId>
-                <version>6.0.0</version>
-                <extensions>true</extensions> <!-- tells maven the plugin contains extensions -->
-                <configuration>
-                    <deploymentPackageProperties>
-                        <!-- Enter any deployment package level properties as <property>value</property> -->
-                        <orchestrator>default</orchestrator>
-                        <satisfiesReleaseNotes>true</satisfiesReleaseNotes>
-                    </deploymentPackageProperties>
-                    <deployables>
-                        <file.Folder name="configurationFolder" location="config"/>
-                        <file.Archive name="configuration" groupId="org.some.group" artifactId="your-artifact" classifier="txt"/>
-                   </deployables>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
 <dependencies>
  <dependency>
   <groupId>junit</groupId>
   <artifactId>junit</artifactId>
   <version>3.8.1</version>
   <scope>test</scope>
+ </dependency>
+  <dependency>
+  <groupId>com.xebialabs.xldeploy</groupId>
+  <artifactId>xldeploy-maven-plugin</artifactId>
+  <version>6.0.0</version>
+  <!--scope>test</scope-->
  </dependency>
 </dependencies>
 </project>
