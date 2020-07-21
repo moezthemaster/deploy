@@ -9,7 +9,7 @@
 
 <properties>
   <maven.deploy.skip>true</maven.deploy.skip>
-  <deployit.plugin.version>5.0.1</deployit.plugin.version>
+  <deployit.plugin.version>6.0.0</deployit.plugin.version>
   <deployit.server>10.0.2.15</deployit.server>
   <deployit.port>4516</deployit.port>
   <deployit.credentials>adm-creds</deployit.credentials>
